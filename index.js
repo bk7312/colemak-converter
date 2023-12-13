@@ -15,6 +15,19 @@ $colemakCopyBtn.addEventListener('click', () => copyText($colemak.value))
 const qwertyStr = "qwertyuiopasdfghjkl;zxcvbnmQWERTYUIOPASDFGHJKL:ZXCVBNM"
 const colemakStr = "qwfpgjluy;arstdhneiozxcvbkmQWFPGJLUY:ARSTDHNEIOZXCVBKM"
 
+const url = new URL(window.location.href)
+const params = new URLSearchParams(url.search)
+
+if (params.has('qtc')) {
+    $qwerty.value = params.get('qtc')
+    toColemak()
+    copyText($colemak.value)
+} else if (params.has('ctq')) {
+    $colemak.value = params.get('ctq')
+    toQwerty()
+    copyText($qwerty.value)
+}
+
 function toColemak() {
     $colemak.value = convert($qwerty.value, colemakStr, qwertyStr)
 }
