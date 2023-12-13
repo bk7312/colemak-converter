@@ -58,15 +58,21 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  translate: 0 -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
   text-align: center;
-  padding: 0.5em 0;
   transition: translate 0.3s ease-in-out;
   font-weight: 500;
 }
 
-#banner.open {
-  translate: none;
+.hide {
+  display: none;
+}
+
+#banner.hide {
+  translate: 0 -100%;
 }
 
 h3 {
@@ -75,18 +81,24 @@ h3 {
 }
 
 .btn {
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid;
+  background: none;
+}
+
+.btn:hover {
+  outline: 2px solid darkblue;
+}
+
+.copy-btn {
   position: absolute;
   top: 0;
   right: 0;
   translate: -30%;
   background: white;
   border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: lightgray;
 }
 
 textarea {

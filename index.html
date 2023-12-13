@@ -18,19 +18,22 @@
         </div>
     </header>
     <main>
-        <div id="banner"></div>
+        <div id="banner" class="hide">
+            <p id="banner-text"></p>
+            <button id="close-banner" class="hide btn">Dismiss</button>
+        </div>
         <div class="container">
             <h3>Type here to convert QWERTY to Colemak</h3>
             <textarea rows="8" name="qwerty" id="qwerty" placeholder="Type Colemak on QWERTY keyboard"></textarea>
-            <button id="copy-qwerty" class="btn">
-                copy
+            <button id="copy-qwerty" class="btn copy-btn">
+                Copy
             </button>
         </div>
         <div class="container">
             <h3>Type here to convert Colemak to QWERTY</h3>
             <textarea rows="8" name="colemak" id="colemak" placeholder="Type QWERTY on Colemak keyboard"></textarea>
-            <button id="copy-colemak" class="btn">
-                copy
+            <button id="copy-colemak" class="btn copy-btn">
+                Copy
             </button>
         </div>
     </main>
